@@ -9,9 +9,11 @@ app = FastAPI(title="RAG Chatbot API")
 try:
     rag = RAGSystem()
     DOCUMENTS = [
-        "COVID-19 is caused by the SARS-CoV-2 virus.",
-        "Symptoms include fever, cough, and loss of taste or smell.",
-        "Vaccines have been developed by Pfizer, Moderna, and AstraZeneca."
+    "COVID-19 is an infectious disease caused by the SARS-CoV-2 virus. (WHO Fact Sheet)",
+    "Most common symptoms: fever, cough, tiredness, loss of taste or smell. (WHO Report 2023)",
+    "Vaccines approved by WHO include Pfizer-BioNTech, Moderna, AstraZeneca, etc. (WHO Vaccine Guidance)",
+    "Primary transmission methods: respiratory droplets, surface contact. (WHO Transmission Guidelines)",
+    "Prevention measures: vaccination, masks, hand hygiene. (WHO Prevention Protocol)"
     ]
     rag.add_documents(DOCUMENTS)
 except Exception as e:
